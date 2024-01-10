@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 <body>
-    <div class="imageBanner">
-        <img src="images/banner.jpg" id="image"width="850px">
-    </div>
+    
+        <div class="imageBanner">
+            <img src="images/banner.jpg" id="image"width="850px">
+        </div>
+        <div class="textBanner">
+            <h1>StarHub</h1>
+        </div>
+  
     <div class="mainContent">
         <div class="mainHeader">
-            <h1>Welcome to StarHub - Join the Stargazing Adventure!</h1>
+            <h1>Welcome to StarHub - Join the Stargazing Adventure!<span class="underlineTop"></span></h1>
             <p>Unlock the wonders of the night sky by singing up with us. Share your stunning stargazing photos, discover and contribute to the best stargazing spots worldwide, stay informed about upcoming celestial events, an connect with like-minded explorers!</p>
-            <h2>Become a part of the StarHub family today!</h2>
+            <h2>Sign up to become a part of the StarHub family today!<span class="underlineBottom"></span></h2>
         </div>
         <div class="signUp">
             <form action="#" method="post">
@@ -60,9 +66,11 @@
         </div>
 
         <div class="mainFooter">
-            <button type="submit">Create Account</button>
-            <p>Already have an account?</p>
-            <button type="button">Log in</button>
+            <button type="submit" class="createAccount">Create Account</button>
+            <div class="secondRow">
+                <p>Already have an account?</p>
+                <button type="button" class="logIn">Log in</button>
+            </div>
 
         </div>
     </div>
