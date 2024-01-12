@@ -70,7 +70,7 @@ button {
 
 :root {
     --content-background-color: #FFFFFF;
-    --content-border-color: #001f3f;
+    --content-border-color: #3e5b76;
     --font-color: #707070
 }
 /* Default Styles for all page sizes */
@@ -80,7 +80,17 @@ body {
     height: 100%;
     color: var(--font-color);
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
     
+}
+
+
+  
+
+.mainContent {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    flex: 1 1 0px;
 }
 
 html {
@@ -92,7 +102,7 @@ img {
 }
 
 .mainContent {
-    background-color: slategrey;
+    background-color: black;
 }
 
 .mainHeader > h1, .mainHeader > p, .mainHeader > h2 {
@@ -173,6 +183,7 @@ button {
 }
 .signUp {
     margin-top: 0;
+
 }
 
 .mainHeader > p { 
@@ -194,9 +205,17 @@ button {
 }
 
 .mainHeader > h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--font-color);
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.mainHeader > h2, .mainHeader > h3 {
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.mainHeader > h1 {
+    font-size: 1.7rem;
+    text-align: center; 
+    color: rgb(97, 96, 96);
     font-style: italic;
     font-weight: 600;
     
@@ -209,7 +228,9 @@ button {
     font-weight: 600;
     margin: 15px;
    
+   
 }
+
 
 label {
     font-size: 0.9rem;
@@ -236,20 +257,33 @@ label {
 }
 button.logIn {
     font-weight: bold;
-    color: var(--font-color);
+    color: black;
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration-skip-ink: none;
+    /* text-underline-offset: 4px; */
 }
 button.createAccount {
-    color: var(--font-color);
+    color: white;
+    text-shadow: black 0.5px 0.5px;
     font-weight: bold;
-    margin-left: 20px;
+  
     margin-bottom: 5px;
     border: 1px black solid;
     border-radius: 10px;
     padding: 3px 10px;
-    background-color: var(--celestial-yellow);
+    /* background-color: var(--celestial-yellow); */
+    /* background-image: url(images/background.jpg); */
+    background-size: contain;
+    background-color: rgb(78, 77, 77);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
 }
+
+.secondRow > p {
+    color:rgb(97, 96, 96);
+}
+
 
 .imageBanner > h3 {
     color: white;
@@ -260,6 +294,7 @@ button.createAccount {
     top: 35%;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
 .imageBanner {
@@ -269,12 +304,18 @@ button.createAccount {
     min-height: 250px;
     position: relative;
     background-position: center;
-  
+    border: 1px solid black;
+    border-right-width: 1px;
+    
    
 }
 
 .mainContent {
-    height: auto;
+    height: 100vh;
+    position: relative;
+    border: 1px black solid;
+    background-position: center;
+    
 }
 
 @media only screen and (min-width: 0px) {
@@ -282,14 +323,10 @@ button.createAccount {
         
         display: flex;
         flex-direction: column;
-        background-color: var(--content-border-color);
+        background-color: black;
         
         min-width: 200px;
         overflow-x: scroll;
-    }
-
-    .imageBanner > h3 {
-        
     }
 
     #image {
@@ -391,7 +428,7 @@ button.createAccount {
 
 @media only screen and (min-width: 401px) {
     body {
-        background-color: var(--content-border-color);
+        background-color: black;
         display: flex;
         flex-direction: column;
         /* height: 100%; */
@@ -445,8 +482,8 @@ button.createAccount {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: clamp(375px, 450px, 80%);
-      
+        /* width: clamp(375px, 450px, 80%);
+       */
     }
 
 
@@ -454,7 +491,7 @@ button.createAccount {
     .form-row {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         box-sizing: border-box;
         flex: 0 0 calc(33.33% - 10px);
         margin-bottom: 10px;
@@ -462,13 +499,20 @@ button.createAccount {
 
     }
 
+
+
     .form-row > .row {
         
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         
+    }
+
+    .createAccountRow {
+        display: flex;
+        justify-content: center;
     }
 
     .form-row >.row > .inputGroup > label {
@@ -480,6 +524,12 @@ button.createAccount {
     }
 
 
+    .mainHeader, .mainFooter, .signUp {
+        background-color: var(--content-background-color);
+        width: 375px;
+    }
+
+
   
 }
 
@@ -487,14 +537,14 @@ button.createAccount {
 
 @media only screen and (min-width: 851px) {
     body {
-        background-color: var(--content-border-color);
+        background-color: black;
         display: flex;
         flex-direction: row;
         height: 100%;
         align-items: center;
         
         max-height: 850px;
-        width: ;
+        
     }
 
     .imageBanner > h3 {
@@ -514,6 +564,12 @@ button.createAccount {
         height: 100%;
         background-size: cover;
         width: 50%;
+    }
+
+    .imageBanner > h3 {
+        font-size: 3rem;
+       
+        text-wrap: balance;
     }
 
     .mainContent {
