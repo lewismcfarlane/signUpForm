@@ -297,9 +297,41 @@ button.createAccount {
     text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }
 
+.imageBanner > p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 300px;
+ 
+}
+
+.mainContent > p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 400px;
+ 
+}
+
+.imageLink {
+    color: white;
+    font-size: .75rem;
+}
+
+.imageLink > a {
+    color: white;
+}
+
 .imageBanner {
+
+
     background-image: url(images/banner.jpg);
     width: 100%;
+    
     background-size: cover;
     min-height: 250px;
     position: relative;
@@ -371,7 +403,8 @@ button.createAccount {
         background-color: var(--content-background-color);
         width: clamp(375px, 450px, 80%);
         /* height: 5rem; */
-        padding-bottom: 20px
+        padding-bottom: 20px;
+        margin-bottom: 1.5rem;
     }
 
     .signUp {
@@ -460,7 +493,8 @@ button.createAccount {
         align-items: center;
         flex: 0;
         width: 100%;
-        padding-bottom: 2rem;
+        
+        /* padding-bottom: 2rem; */
         
     }
 
@@ -473,6 +507,7 @@ button.createAccount {
         background-color: var(--content-background-color);
         width: clamp(375px, 450px, 80%);
         padding-bottom: 10px;
+        margin-bottom: 1.5rem;
         /* height:  */
   
     }
@@ -550,6 +585,7 @@ button.createAccount {
     .imageBanner > h3 {
        top: 35%;
     }
+
 
 
 
