@@ -350,6 +350,35 @@ button.createAccount {
     
 }
 
+
+
+/* Form Styling */
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    height: 1rem;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+
+input[type=text]:focus {
+    border: 2px solid black;
+}
+
+.inputGroup[data-error] .input {
+    border-color: #c92432;
+    color: #c92432
+}
+
+#password, #confirmPassword {
+    font-size: 1.4rem;
+
+}
+
+
 @media only screen and (min-width: 0px) {
     body {
         
@@ -389,18 +418,18 @@ button.createAccount {
         align-items: center;
         height: 100%;
         width: 100%;
-        background-color: var(--content-border-color);
+        background-color: black;
         /* padding: 100px; */
         
     }
 
     .mainHeader {
-        background-color: var(--content-background-color);
+        background-color: black;
         width: clamp(375px, 450px, 80%);
         margin-top: 20px;
     }
     .mainFooter {
-        background-color: var(--content-background-color);
+        background-color: black;
         width: clamp(375px, 450px, 80%);
         /* height: 5rem; */
         padding-bottom: 20px;
@@ -627,7 +656,7 @@ button.createAccount {
 
     .mainHeader, .mainFooter, .signUp {
         background-color: var(--content-background-color);
-        width: clamp(375px, 60%, 475px);
+        width: 375px;
     }
     
 
@@ -670,3 +699,4 @@ button.createAccount {
         align-items: center;
     }
 }
+
