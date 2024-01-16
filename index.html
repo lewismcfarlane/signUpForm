@@ -28,28 +28,29 @@
             <h2>Sign up to become a part of the StarHub family today!<span class="underlineBottom"></span></h2>
         </div>
         <div class="signUp">
-            <form action="#" method="post">
+            <form action="welcome.html" method="">
                 <div class="form-row">
                     <div class="row">
                         <div class="inputGroup">
                             <label for="firstName">First Name:</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                            </div>
+                            <input type="text" id="firstName" name="firstName" required pattern="^[A-Za-z\-]+$" autocomplete="off">
+                        </div>
                         <div class="inputGroup">
                             <label for="surname">Surname:</label>
-                            <input type="text" id="surname" name="surname" required>
+                            <input type="text" id="surname" name="surname" required pattern="^[A-Za-z\-]+$" autocomplete="off">
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="row">
-                        <div class="inputGroup">
+                        <div class="inputGroup" data-error="A user with this email already exists.">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="text" id="email" name="email" required   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" autocomplete="off">
                         </div>
                         <div class="inputGroup">
                             <label for="phoneNumber">Phone Number:</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                            <input type="text" id="phoneNumber" name="phoneNumber" required 
+                            pattern="^\d{10}$" autocomplete="off">
                         </div>
                     </div>
                 </div>
@@ -57,17 +58,17 @@
                     <div class="row">
                         <div class="inputGroup">
                             <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
+                            <input type="password" id="password" name="password" required autocomplete="off" minlength="10">
                         </div>
                         <div class="inputGroup">
                             <label for="confirmPassword">Confirm Password:</label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required autocomplete="off">
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="row createAccountRow">
-                        <button type="submit" class="createAccount">Create Account</button>
+                        <button type="submit" name="createAccount" id="createAccount" class="createAccount">Create Account</button>
                         
                     </div>
                 </div>
@@ -86,6 +87,7 @@
         </div>
         <p class="imageLink">Image by <a class="imageLink" href="https://unsplash.com/photos/stars-in-the-sky-during-night-time-Cq5NaI0yKBE" target="_blank" rel="noopener noreferrer">Olena Bohovyk</a> on <a class="imageLink" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
     </div>
+    
 </body>
 <script src="app.js"></script>
 </html>
